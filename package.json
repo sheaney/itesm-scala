@@ -1,11 +1,21 @@
 {
-  "name": "node-example",
+  "name": "itesm-scala",
   "version": "0.0.1",
+  "description": "Itesm Scala course sign up",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "express": "2.5.x"
+    "sequelize": "~2.0.0-alpha2",
+    "pg": "~2.3.1",
+    "ejs": "~0.8.4",
+    "express": "~3.3.4",
+    "async": "~0.2.9",
+    "body-parser": "~1.9.0"
   },
   "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
+    "node": "0.10.12",
+    "npm": "1.2.30"
   }
 }
