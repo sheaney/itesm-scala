@@ -4,13 +4,14 @@ var async   = require('async')
   , fs      = require('fs')
   , http    = require('http')
   , https   = require('https')
-  , db      = require('./models');
+  , db      = require('./models')
+  , bodyParser = require('body-parser');
 
 var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
-app.use(express.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('/', function(request, response) {
   var buf = fs.readFileSync("index.html");
