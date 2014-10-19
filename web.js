@@ -18,13 +18,12 @@ app.get('/', function(request, response) {
 });
 
 app.post('/add-user', function(request, response) {
-  var user      = request.body.user;
-  console.log(user);
+  var user = request.body.user;
   addUser(user, function(err) {
     if (err) {
       response.send(err);
     } else {
-      response.send('User saved successfully')
+      response.render("success", {user: user});
     }
   });
 });

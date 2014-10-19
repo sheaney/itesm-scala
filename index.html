@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>Intro a Scala</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -130,12 +130,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <a class="brand" href="#">Intro a Scala</a>
           <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+            <ul class="nav" role="tablist">
+              <li><a href="#schedule">Horario</a></li>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+              <li><a href="#register">Registro</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -145,7 +145,7 @@
     <!-- We use row-fluid inside containers to achieve a resizable layout. -->
     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
     <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
+    <div class="container" id="home">
       <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
       <!-- www.google.com/fonts/specimen/Ubuntu -->
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
@@ -165,17 +165,17 @@
               <div class="row-fluid statistics">
                 <div class="span4">
                   <div class="linediv-l">
-                    <p>2 días</p>
+                    <p>$50 MXN</p>
                   </div>
                 </div>
                 <div class="span4">
                   <div class="linediv-c">
-                    <p>2 sesiones</p>
+                    <p>15 de Nov</p>
                   </div>
                 </div>
                 <div class="span4">
                   <div class="linediv-r">
-                    <p>2 hrs</p>
+                    <p>4 hrs</p>
                   </div>
                 </div>
               </div>
@@ -209,35 +209,71 @@
           <p>
             <a href="http://scala-lang.org/">Scala</a> es un lenguaje de programación que busca
             mezclar las mejores prácticas y técnicas de programación funcional y programación
-            orientada a objetos. Te permite escribir código senillo y reusable e interoperar
+            orientada a objetos. Te permite escribir código sencillo y reusable e interoperar
             fácilmente con todas las librerías de Java.
           </p>
           <p>
-            Este curso tiene el objetivo de enseñarte los conceptos básicos de Scala para que
-            puedas codificar programas sencillos y tengas las bases para explorar el lenguaje
-            más a fondo.
+            Scala es un lenguaje que ha estado ganando popularidad lentamente en la industria,
+            con compañías como Twitter, LinkedIn, Coursera, entre otras usándolo para algunos de sus
+            servicios.
           </p>
         </div>
       </div>
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            Scala es un lenguaje que ha estado ganando popularidad lentamente en la industria,
-            con compañías como Twitter, Linkedin, entre otras usándolo para algunos de sus
-            servicios.
-          </p>
-          <p>
-            El curso consiste en 2 sesiones de duración 2 cada una, el día Sábado y Domingo.
+            Este curso tiene el objetivo de enseñarte los conceptos básicos de Scala para que
+            puedas codificar programas sencillos y tengas las bases para explorar el lenguaje
+            más a fondo.
           </p>
        </div>
         <div class="span5 asset">
           <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
         </div>
       </div>
+      <!-- Schedule -->
+      <div class="container" id="schedule">
+        <div class="row-fluid">
+          <div class="span10 offset1">
+            <h3>Horario</h3>
+            <div class="accordion" id="accordion1">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                    data-parent="#accordion1" href="#date">
+                    Fecha
+                  </a>
+                </div>
+                <div id="date" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    <p>Sábado 15 de Noviembre de 2014</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                    data-parent="#accordion1" href="#sessions">
+                    Sesiones
+                  </a>
+                </div>
+                <div id="sessions" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    <p><b>Sesión 1:</b> 1PM - 3PM</p>
+                    <p><b>Sesión 2:</b> 4PM - 6PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of schedule-->
+
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
       <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
       <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
-      <div class="row-fluid faq">
+      <div class="row-fluid faq" id="faq">
         <div class="span10 offset1">
           <h3>Preguntas Frecuentes</h3>
           <div class="accordion" id="accordion2">
@@ -245,13 +281,41 @@
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse"
                   data-parent="#accordion2" href="#collapseOne">
-                  ¿Para quién es este curso?
+                  ¿Cuánto cuesta?
                 </a>
               </div>
               <div id="collapseOne" class="accordion-body collapse">
                 <div class="accordion-inner">
+                  El curso tiene un costo de <b>$50 pesos</b>. Lo que se recaude
+                  irá al fondo de becas de la SAITC.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse"
+                  data-parent="#accordion2" href="#collapseTwo">
+                  ¿Dónde puedo pagar?
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Se puede pagar en la dirección de carrera de ITC con Laura, o bien
+                  el mismo día en el salón donde se darán las sesiones.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse"
+                  data-parent="#accordion2" href="#collapseThree">
+                  ¿Para quién es este curso?
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
                   Este curso es para gente que tiene <b>1 a 2 años programando</b> ya sea en Java,
-                  Ruby, Python, Javascript o cualquier otro lenguaje de tu preferencia. Sin embargo,
+                  C, Ruby, Python, Javascript o cualquier otro lenguaje. Sin embargo,
                   para aprovechar bien este curso, ayuda tener experiencia con programación orientada
                   a objetos y/o programación funcional.
                 </div>
@@ -260,34 +324,46 @@
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse"
-                  data-parent="#accordion2" href="#collapseTwo">
+                  data-parent="#accordion2" href="#collapseFour">
                   ¿Qué necesito llevar?
                 </a>
               </div>
-              <div id="collapseTwo" class="accordion-body collapse">
+              <div id="collapseFour" class="accordion-body collapse">
                 <div class="accordion-inner">
-                  Para este curso solo necesitas llevar tu laptop, y tener listo tu editor
+                  Para este curso solo necesitas llevar tu laptop y tener listo tu editor
                   preferido de texto. La instalación se hará en el salón. Lo más importante
-                  es que vengas con toda la disposición para aprender y que preguntes mucho
-                  durante la sesión.
+                  es que vengas con toda la <b>disposición para aprender</b> y <b>preguntar mucho!</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
-      <!-- http://creativecommons.org/licenses/ -->
-      <div class="row-fluid footer">
-        <div class="span12">
-          <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-            By-SA 3.0
-            </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.
-          </p>
+      <!-- Registration -->
+      <div class="container" id="register">
+        <div class="row-fluid">
+          <div class="span10 offset1">
+            <h3>Registro</h3>
+            <form role="form" method="post" action="/add-user">
+              <div class="form-group">
+                <label for="user[email]">Email</label>
+                <input type="email" class="form-control" name="user[email]" id="user[email]" placeholder="Ingrese email">
+              </div>
+              <div class="form-group">
+                <label for="user[firstname]">Nombre</label>
+                <input type="text" class="form-control" name="user[firstname]" id="user[firstname]" placeholder="Nombre">
+              </div>
+              <div class="form-group">
+                <label for="user[lastname]">Apellidos</label>
+                <input type="text" class="form-control" name="user[lastname]" id="user[lastname]" placeholder="Apellidos">
+              </div>
+              <button type="submit" class="btn btn-default">Regístrame!</button>
+            </form>
+          </div>
         </div>
       </div>
+      <!-- End of registration -->
+
     </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
